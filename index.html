@@ -9,14 +9,14 @@
     </head>
     <body>
         <div class="sidenav">
-            <h2>Board Menu</h2>
+            <h1>Boards</h1>
             <ul>
                 <a href="#"><li>Team Calendar</li></a>
                 <a href="#"><li>Team Stats</li></a>
                 <a href="#"><li>Project Viewer</li></a>
             </ul>
             <br/>
-            <h3>Filter Settings</h3>
+            <h2>Filter Settings</h2>
             <div class="nav-filters">
                 <label>Country: </label>
             <select>
@@ -63,40 +63,55 @@
             <section class="pviewer">
                 <div class="pv-generalinfo">
                     <div id="pv-title">
-                        <h1>Projekttitel - mal länger, mal kürzer</h1>
+                        <h1 class = "secdescription-h1">Projekttitel - mal länger, mal kürzer</h1>
                         <h2>Project Title- at times longer, then shorter</h2>
-                        <br/>
                     </div>
                     <div id="pv-info">
                         <table id="projectids">
                             <thead>
                                 <tr>
-                                    <th scope="col" rowspan="2">Project Numbers</th>
+                                    <th scope="colgroup" colspan="2">Project Numbers</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>BMZ-No. (IV):</td>
-                                    <td>20210508</td>
+                                <tr class="table-firstrow">
+                                    <td class="table-left table-imp">
+                                        BMZ-No. (IV):
+                                    </td>
+                                    <td class="table-right table-imp">
+                                        20210508
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>BMZ-No. (AM):</td>
-                                    <td>54321</td>
+                                    <td class="table-left table-nimp">
+                                        BMZ-No. (AM):
+                                    </td>
+                                    <td class="table-right table-nimp">
+                                        54321
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>InPro-No. (IV):</td>
-                                    <td>20210508</td>
+                                    <td class="table-left table-imp">
+                                        InPro-No. (IV):
+                                    </td>
+                                    <td class="table-right table-imp">
+                                        20210508
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>InPro-No. (AM):</td>
-                                    <td>54321</td>
+                                    <td class="table-left table-nimp">
+                                        InPro-No. (AM):
+                                    </td>
+                                    <td class="table-right table-nimp">
+                                        54321
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                         <table id="projectpartners">
                             <thead>
                                 <tr>
-                                    <th>Project Partners</th>
+                                    <th scope="colgroup" colspan="2">Project Partners</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -117,7 +132,7 @@
                         <table id="projectfinancials">
                             <thead>
                                 <tr>
-                                    <th scope="col" rowspan="2">Project Financials</th>
+                                    <th scope="colgroup" colspan="2">Project Financials</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -140,6 +155,10 @@
                             </tbody>
                         </table>
                     </div>
+                </div>
+                <div id="pv-intro">
+                    <h1 class="secdescription-h1">Project Description</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
             </section>
         </main>
