@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>JPro - The LEb3 Portfolio Viewer</title>
+        <link href="./resources/css/style.css" type="text/css" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="sidenav">
+            <h2>Board Menu</h2>
+            <ul>
+                <a href="#"><li>Team Calendar</li></a>
+                <a href="#"><li>Team Stats</li></a>
+                <a href="#"><li>Project Viewer</li></a>
+            </ul>
+            <br/>
+            <h3>Filter Settings</h3>
+            <div class="nav-filters">
+                <label>Country: </label>
+            <select>
+                <option>All</option>
+                <option>India</option>
+                <option>Bangladesh</option>
+                <option>Sri Lanka</option>
+                <option>Nepal</option>
+            </select>
+            </div>
+            <br>
+            <div class="nav-filters">
+                <label>Sector Team:<br/></label>
+                <select>
+                    <option>All</option>
+                    <option>Mobility</option>
+                    <option>Energy Efficiency</option>
+                    <option>NaWi</option>
+                    <option>Others</option>
+                </select>
+                <br>
+            </div>
+            <div class="nav-filters">
+                <label>Project:<br/></label>
+                <select>
+                    <option>All</option>
+                    <option>Projekt I</option>
+                    <option>Project II</option>
+                    <option>Project III</option>
+                    <option>Project IV</option>
+                </select>
+                <br/>
+            </div>
+            <div class="nav-filters">
+                <label>Date Range:</label>
+                <input type="date"/>
+                <input type="date"/>
+            </div>
+        </div>
+        <main>
+            <section class="header-bar">
+                <span>Welcome to the Team Dashboard</span>
+            </section>
+            <section class="pviewer">
+                <div class="pv-generalinfo">
+                    <div id="pv-title">
+                        <h1>Projekttitel - mal länger, mal kürzer</h1>
+                        <h2>Project Title- at times longer, then shorter</h2>
+                        <br/>
+                    </div>
+                    <div id="pv-info">
+                        <table id="projectids">
+                            <thead>
+                                <tr>
+                                    <th scope="col" rowspan="2">Project Numbers</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>BMZ-No. (IV):</td>
+                                    <td>20210508</td>
+                                </tr>
+                                <tr>
+                                    <td>BMZ-No. (AM):</td>
+                                    <td>54321</td>
+                                </tr>
+                                <tr>
+                                    <td>InPro-No. (IV):</td>
+                                    <td>20210508</td>
+                                </tr>
+                                <tr>
+                                    <td>InPro-No. (AM):</td>
+                                    <td>54321</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table id="projectpartners">
+                            <thead>
+                                <tr>
+                                    <th>Project Partners</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Partner One</td>
+                                    <td>Role in Projetc</td>
+                                </tr>
+                                <tr>
+                                    <td>Partner Two</td>
+                                    <td>Role in Project</td>
+                                </tr>
+                                <tr>
+                                    <td>Partner Three</td>
+                                    <td>And their Role</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table id="projectfinancials">
+                            <thead>
+                                <tr>
+                                    <th scope="col" rowspan="2">Project Financials</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Investment Measure:</td>
+                                    <td>150,000,000.00 EUR</td>
+                                </tr>
+                                <tr>
+                                    <td>Accompanying Measure: </td>
+                                    <td>2,800,000.00 EUR</td>
+                                </tr>
+                                <tr>
+                                    <td>Grants: </td>
+                                    <td>0.00 EUR</td>
+                                </tr>
+                                <tr>
+                                    <td>SBF:</td>
+                                    <td>25,983.15 EUR</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer></footer>
+    </body>
+</html>
