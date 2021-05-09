@@ -1,7 +1,7 @@
 # **JPro**
 
 Simple web interface to display LEb3 team pportfolio's projects
-
+ 
 __________________________________
 ## **Table of Contents**
 ### **1. Introduction**
