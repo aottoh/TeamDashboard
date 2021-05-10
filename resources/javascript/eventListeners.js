@@ -2,6 +2,13 @@ const btnTeamCalendar = document.getElementById('open-teamcalendar');
 const btnTeamStats = document.getElementById('open-teamstats');
 const btnPViewer = document.getElementById('open-pviewer');
 
+let inputCountry = document.getElementById('countryfilter');
+let inputSector = document.getElementById('sectorfilter');
+let inputProject = document.getElementById('projectfilter');
+let arrCurrentProjectList = arrAllProjects;
+
+let pvTitleH1 = document.querySelector('#pv-title h1');
+let pvTitleH2 = document.querySelector('#pv-title h2');
 
 function showTeamCalendar(event) {
     document.querySelector('.welcomepage').style.display = 'none';
@@ -24,69 +31,70 @@ function showPViewer(event) {
     document.querySelector(".header-bar span").innerHTML = "Project Viewer";
 };
 
-/*
 
-function updateFilters() {
-    
-    
-    let projectFilter = document.getElementById("projectfilter");
-    let sectorFilter = document.getElementById("sectorfilter");
-  
-    let selectedCountry = document.getElementById('countryfilter').value;
-    let selectedSector = document.getElementById('sectorfilter').value;
-  
-    if(selectedCountry === 'All') {
-      if(selectedSector === 'All'){
-        let arrAllowedProjects = [... new Set(arrAllProjects.filter(element => element._country === selectedCountry).map(element => element._name))];
-      
-    } else {
-        let arrAllowedProjects = [... new Set(arrAllProjects.filter(element => (element._country === selectedCountry) && (element._team === selectedSector)).map(element => element._name))];
-    }
 
-    } else {
-  
-      if(selectedSector === 'All'){
-        let arrAllowedProjects = [... new Set(arrAllProjects.filter(element => element._country === selectedCountry).map(element => element._name))];
+function updateProjectFilter() {
 
-      } else {
-        let arrAllowedProjects = [... new Set(arrAllProjects.filter(element => (element._country === selectedCountry) && (element._team === selectedSector)).map(element => element._name))];
-  
-      }
-  
+  let selectedCountry = document.getElementById('countryfilter').value;
+  let selectedSector = document.getElementById('sectorfilter').value;
+  let pviewerBoardVisibility = document.querySelector('.pviewer');
+  let arrAllowedProjects = []
+  const firstElementAll = document.createElement('option');
+  firstElementAll.text = "All";
+
+  inputProject.options.length = 0;
+
+
+  if((selectedCountry === 'All') && (selectedSector === 'All')){
+    arrAllowedProjects = [... new Set(arrAllProjects.map(element => element._name))];
+
+  } else if((selectedCountry === 'All') && (selectedSector !== 'All')){
+    arrAllowedProjects = [... new Set(arrAllProjects.filter(element => element._team === selectedSector).map(element => element._name))];
+
+  } else if((selectedCountry !=='All') && (selectedSector === 'All')){
+    arrAllowedProjects = [... new Set(arrAllProjects.filter(element => element._country === selectedCountry).map(element => element._name))];
+
+  } else {
+    arrAllowedProjects = [... new Set(arrAllProjects.filter(element => (element._country === selectedCountry) && (element._team === selectedSector)).map(element => element._name))];
   }
-  
-   
-  
-  //  if(selectedSector === 'All'){
-  //    let arrAllowedProjects = [... new Set(arrAllProjects.filter(element => element._country === selectedCountry).map(element => element._name))];
-  //  } else {
-  //    let arrAllowedProjects = [... new Set(arrAllProjects.filter(element => (element._country === selectedCountry) && (element._team === selectedSector)).map(element => element._name))];
-  //  }
-  
-    projectFilter.options.length = 0;
 
-    const firstElementAll = document.createElement('option');
+  arrCurrentProjectList = arrAllowedProjects;
   
-    firstElementAll.text = "All";
-  
-    projectFilter.add(firstElementAll);
-  
-   
-  
-    arrAllowedProjects.forEach(function(element){
-      let newEntry = document.createElement('option');
-      newEntry.text = element
-      projectFilter.add(newEntry);
-    })
-  
-  };
-  
-   
-document.getElementById('countryfilter').addEventListener('input', updateFilters);
-  
-  */
+  if(pviewerBoardVisibility.style.display !== "block"){
+    arrAllowedProjects.unshift('All');
+  }
 
+  arrAllowedProjects.forEach(function(element){
+    let newEntry = document.createElement('option');
+    newEntry.text = element
+    inputProject .add(newEntry);
+  })
+
+  
+};
+
+function updatePViewer(){
+  let selectedProject = document.querySelector('#countryfilter option').innerHTML
+  if(selectedProject === 'All'){
+    selectedProject = arrCurrentProjectList[0]._name;
+  }
+
+  pvTitleH1.innerHTML = [... new Set(arrAllProjects.filter(element => element._name === selectedProject).map(element => element._name))][0];
+}
+
+
+inputCountry.addEventListener('input', updateProjectFilter);
+inputSector.addEventListener('input', updateProjectFilter);
+//inputCountry.addEventListener('input', updatePViewer);
 
 btnTeamCalendar.addEventListener('click', showTeamCalendar);
 btnTeamStats.addEventListener('click', showTeamStats);
-btnPViewer.addEventListener('click', showPViewer); 
+btnPViewer.addEventListener('click', showPViewer);
+
+btnTeamCalendar.addEventListener('click', updateProjectFilter);
+btnTeamStats.addEventListener('click', updateProjectFilter);
+btnPViewer.addEventListener('click', updateProjectFilter);
+
+
+
+btnPViewer.addEventListener('click', updatePViewer);
