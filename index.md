@@ -1,6 +1,6 @@
-# **JPro**
+# **TeamDashboard**
 
-Simple web interface to display LEb3 team pportfolio's projects
+Simple web interface to display the team's portfolio projects
  
 __________________________________
 ## **Table of Contents**
@@ -12,8 +12,8 @@ __________________________________
 
 __________________________________
 ## **(1) Introduction**
-This simple web applications serves to display information about LEb3's team portfolio projects. The data does not automatically update or, nor does it pull any external data. The *'Dashboard'* is dependent on a manually updated excel-file (csv) which is in turn converted into a readable javascript file, which holds the project data in form of 'project objects'.
-The aim of this *'Dashboard'* is to provide the user with an easier overview of all the LEb3 related project information. The idea is that all data, links and other relevant LEb3 information can be easily accessed through this single platform.
+This simple web applications serves to display information about team portfolio projects. The data does not automatically update or, nor does it pull any external data. The *'Dashboard'* is dependent on a manually updated excel-file (csv) which is in turn converted into a readable javascript file, which holds the project data in form of 'project objects'.
+The aim of this *'Dashboard'* is to provide the user with an easier overview of all the team's related project information. The idea is that all data, links and other relevant team information can be easily accessed through this single platform.
 
 __________________________________
 
