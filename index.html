@@ -17,7 +17,7 @@
                 <a href="#"><li id="open-teamcalendar">Team Calendar</li></a>
                 <a id="open-teamstats" href="#"><li>Team Stats</li></a>
                 <a id="open-pviewer" href="#"><li>Project Viewer</li></a>
-            </ul>
+            </ul><!--
             <br/>
             <h2>Filter Settings</h2>
             <div class="nav-filters">
@@ -38,7 +38,7 @@
                 </select>
                 <br/>
             </div>
-            <!--
+            
             <div class="nav-filters">
                 <label>Date Range:</label>
                 <input type="date"/>
@@ -59,104 +59,171 @@
                 </div>
             </section>
             <section class="pviewer">
-                <div class="infocard" id="pv-1-generalinfo">
-                    <div class="infocard-title" id="pv-title">
-                        <h1>Projekttitel - mal länger, mal kürzer</h1>
-                        <h2>Project Title- at times longer, then shorter</h2>
+                <div class="filtercard" id="pviewer-filtercard">
+                    <div class="filtercard-filters">
+                        <div class="nav-filters">
+                            <label>Country: </label>
+                        <select id="countryfilter">
+                        </select>
+                        </div>
+                        <div class="nav-filters">
+                            <label>Sector Team:<br/></label>
+                            <select id="sectorfilter">
+                            </select>
+                        </div>
+                        <div class="nav-filters">
+                            <label>Project:<br/></label>
+                            <select id="projectfilter">
+                            </select>
+                        </div>
                     </div>
-                    <div id="pv-infotables">
-                        <table id="projectids">
-                            <thead>
-                                <tr>
-                                    <th scope="colgroup" colspan="2">Project Numbers</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="table-firstrow">
-                                    <td class="table-left table-imp">
-                                        BMZ-No. (IV):
-                                    </td>
-                                    <td class="table-right table-imp">
-                                        20210508
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="table-left table-nimp">
-                                        BMZ-No. (AM):
-                                    </td>
-                                    <td class="table-right table-nimp">
-                                        54321
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="table-left table-imp">
-                                        InPro-No. (IV):
-                                    </td>
-                                    <td class="table-right table-imp">
-                                        20210508
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="table-left table-nimp">
-                                        InPro-No. (AM):
-                                    </td>
-                                    <td class="table-right table-nimp">
-                                        54321
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table id="projectpartners">
-                            <thead>
-                                <tr>
-                                    <th scope="colgroup" colspan="2">Project Partners</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="table-left">Partner One</td>
-                                    <td class="table-right">Role in Projetc</td>
-                                </tr>
-                                <tr>
-                                    <td class="table-left">Partner Two</td>
-                                    <td class="table-right">Role in Project</td>
-                                </tr>
-                                <tr>
-                                    <td class="table-left">Partner Three</td>
-                                    <td class="table-right">And their Role</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table id="projectfinancials">
-                            <thead>
-                                <tr>
-                                    <th scope="colgroup" colspan="2">Project Financials</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="table-left table-imp">Investment Measure:</td>
-                                    <td class="table-right table-imp">150,000,000.00 EUR</td>
-                                </tr>
-                                <tr>
-                                    <td class="table-left table-nimp">Accompanying Measure: </td>
-                                    <td class="table-right table-nimp">2,800,000.00 EUR</td>
-                                </tr>
-                                <tr>
-                                    <td class="table-left table-imp">Grants: </td>
-                                    <td class="table-right table-imp">0.00 EUR</td>
-                                </tr>
-                                <tr>
-                                    <td class="table-left table-nimp">SBF:</td>
-                                    <td class="table-right table-nimp">25,983.15 EUR</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <!--<div class="filtercard-button">
+                        <button id="submitfilters1" >Submit</button>
+                    </div> --->
+                </div>
+                <div class ="card-img-sep">
+                    <div class="infocard" id="pv-1-generalinfo">
+                        <div class="infocard-title" id="pv-title">
+                            <h1>Titel</h1>
+                            <h2>Title</h2>
+                        </div>
+                        <div id="pv-infotables">
+                            <table id="projectids">
+                                <thead>
+                                    <tr>
+                                        <th scope="colgroup" colspan="2">Project Numbers</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-firstrow">
+                                        <td class="table-left table-imp">
+                                            BMZ-No. (IV):
+                                        </td>
+                                        <td class="table-right table-imp" id="pv-td-bmz-inv">
+                                            #
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-left table-nimp">
+                                            BMZ-No. (AM):
+                                        </td>
+                                        <td class="table-right table-nimp" id="pv-td-bmz-bm">
+                                            #
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-left table-imp">
+                                            InPro-No. (IV):
+                                        </td>
+                                        <td class="table-right table-imp" id="pv-td-inpro-inv">
+                                            #
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-left table-nimp">
+                                            InPro-No. (AM):
+                                        </td>
+                                        <td class="table-right table-nimp" id="pv-td-inpro-bm">
+                                            #
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table> <!--
+                            <table id="projectpartners">
+                                <thead>
+                                    <tr>
+                                        <th scope="colgroup" colspan="2">Project Partners</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="table-left">Partner One</td>
+                                        <td class="table-right">Role in Projetc</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-left">Partner Two</td>
+                                        <td class="table-right">Role in Project</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-left">Partner Three</td>
+                                        <td class="table-right">And their Role</td>
+                                    </tr>
+                                </tbody>
+                            </table> -->
+                            <table id="projectfinancials">
+                                <thead>
+                                    <tr>
+                                        <th scope="colgroup" colspan="2">Project Financials</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="table-left table-imp">
+                                            Investment Measure:
+                                        </td>
+                                        <td class="table-right table-imp" id="pv-td-inv">
+                                            #
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-left table-nimp">
+                                            Accompanying Measure:
+                                        </td>
+                                        <td class="table-right table-nimp" id="pv-td-bm">
+                                            #
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-left table-imp">
+                                            Grants:
+                                        </td>
+                                        <td class="table-right table-imp" id="pv-td-ve">
+                                            #
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-left table-nimp">
+                                            SBF:
+                                        </td>
+                                        <td class="table-right table-nimp"  id="pv-td-sbf">
+                                            #
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="pv-image">
+                        <figure id="pv-image-fig">
+                            <img src="" type="image/jpg" id="pv_projectimage" alt="">
+                            <figcaption>
+                                <a>Link to Website</a>
+                                <br/>
+                                <a>Link to Image</a>
+                            </figcaption>
+                        </figure>
                     </div>
                 </div>
                 <div class ="infocard" id="pv-intro">
                     <h1 class="infocard-title">Project Description</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p id="pv-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="card-card-sep">
+                    <div class="infocard">
+                        <h1>here 1</h1>
+                        <h1>here 1</h1>
+                        <h1>here 1</h1>
+                    </div>
+                    <div class="infocard">
+                        <h1>here 2</h1>
+                        <h1>here 2</h1>
+                        <h1>here 2</h1>
+                    </div>
+                    <div class="infocard">
+                        <h1>here 2</h1>
+                        <h1>here 2</h1>
+                        <h1>here 2</h1>
+                    </div>  
                 </div>
             </section>
             <section class="teamcalendar">
