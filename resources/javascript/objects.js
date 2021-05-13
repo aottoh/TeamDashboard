@@ -1,3 +1,10 @@
+/*####################################
+## filename: objects.js
+## projectname: TeamDashboard
+## author: Alexander Hoffmann
+## version: 0.1.1
+## date: 2021-05-13
+####################################*/
 
 const arrAllProjects = 
 [{
@@ -325,7 +332,6 @@ const arrAllProjects =
   }
   ]
   
-
   const arrProjectDescriptions = [
     {
       _name: 'Apfel',

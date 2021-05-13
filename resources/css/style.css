@@ -1,11 +1,17 @@
+/*####################################
+## filename: style.css
+## projectname: TeamDashboard
+## author: Alexander Hoffmann
+## version: 0.1.1
+## date: 2021-05-13
+####################################*/
+
 html {
     /*font-family: Arial, Helvetica, sans-serif;*/
     font-family: "Inter";
 }
 
 body {
-    max-width: 1200 px;
-    min-width: 1200 px;
     display: flex;
     margin: 0 auto;
     background-color: white;
@@ -14,11 +20,15 @@ body {
 main {
     width: 100%;
     margin-left: 280px;
+    margin-top: 105px;
+    position: absolute;
 }
 
 section {
-    margin-top: 104px;
+    margin: 0;
     flex-flow: column wrap;
+    min-width: 1000px;
+    max-width: 1000px;
 }
 
 /* 
@@ -28,7 +38,6 @@ section {
 */
 
 .sidenav {
-    /*height: 95%;*/
     min-height: 75%;
     width: 250px;
     overflow: hidden;
@@ -36,16 +45,13 @@ section {
     position: fixed;
     z-index: 10;
     margin-left: 20px;
-    /*margin-top: 20px;*/
     margin-top: 94px;
     margin-bottom: 20px;
-    /*background-color: rgba(78, 110, 97, 0.8);*/
     background-color: white;
     overflow-y: hidden;
     justify-content: flex-start;
     border-radius: 25px;
     border: 5px solid rgba(78, 110, 97, 1);
-    /*box-shadow: 5px 5px 5px 0 rgb(74, 75, 76);*/
 }
 
 .sidenav h1 {
@@ -92,59 +98,26 @@ section {
 ##########################
 */
 
-header {
-    display: inline-block;
-    position: fixed;
-    z-index: 10;
-    max-width: 1040px;
-    width: 100%;
-    text-align: center;
-    margin-top: 20px;
-    margin-left: 10px;
-    padding: 15px 0;
-    /*background-color: rgba(19, 37, 54, 0.25);*/
-    background-color: white;
-    color: black;
-    border-radius: 25px;
-    border: 5px solid rgba(19, 37, 54, 1);
-    /*border: 5px solid rgba(19, 37, 54, 1);*/
-    /*box-shadow: 5px 5px 5px 0 rgb(74, 75, 76);*/
-}
-
 header span {
     font-size: 30px;
     letter-spacing: 0.1em;
     word-spacing: 0.1em;
     font-weight: 700;
-}
-
-
-/* 
-##########################
-#####    Infocard    #####
-##########################
-*/
-
-.div-infocard {
+    display: inline-block;
+    position: fixed;
+    z-index: 10;
+    max-width: 1040px;
+    min-width: 1040px;
+    text-align: center;
     margin-top: 20px;
-    margin-left: 25px;
-    margin-right: 30px;
-    padding: 5px 10px;
-    /*background-color: white;*/
-    background-color: rgba(97, 95, 94, 0.1);
-    max-width: 1000px;
-    flex-flow: column wrap;
-    border-radius: 15px;
-    border: 1px solid rgba(97, 95, 94, 0.25);
-    /*display: none;*/
-}
-
-.div-infocard_title {
-    margin-top: 5px;
-    margin-bottom: 2px;
+    margin-left: 280px;
+    padding: 15px 0;
+    background-color: white;
     color: black;
-    font-weight: 400;
-    font-size: 24px;
+    border-radius: 25px;
+    border: 5px solid rgba(19, 37, 54, 1);
+    min-height: 40px;
+    max-height: 40px;
 }
 
 /* 
@@ -156,9 +129,9 @@ header span {
 .div-subheader{
     position: fixed;
     z-index: 9;
-    margin-top: 20px;
-    margin-left: 25px;
-    margin-right: 30px;
+    display: none;
+    margin-top: 105px;
+    margin-left: 292px;
     padding: 5px 10px;    
     border-radius: 15px;
     background-color: rgba(255,255,255,0.75);
@@ -166,6 +139,7 @@ header span {
     min-width: 1000px;
     max-width: 1000px;
     transition: 1s;
+    text-align: center;
 }
 
 .div-subheader:hover{
@@ -173,7 +147,7 @@ header span {
     transition: 1s;
 }
 
-.div-filtercard-filters {
+.div-subheader_filters {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -217,6 +191,128 @@ header span {
     transition: 0.75s;
 }
 
+.div-subheader_timerange {
+    display: flex;
+    justify-content: space-around;
+    /*margin-top: 10px;
+    margin-bottom: 5px;*/
+    align-items: center;
+    padding: 5, 10;
+    border: 1 px solid black;
+}
+
+.div-subheader_timerange h1 {
+    font-size: 18px;
+    color: rgba(62, 63, 64, 1);
+    letter-spacing: 0.05em;
+    word-spacing: 0.1em;
+    line-height: 2em;
+    font-weight: 700;
+    padding: 5px 0;
+}
+
+.div-subheader_timerange_box {
+    display: flex;
+    flex-flow: column wrap;
+   /* justify-content: space-evenly;*/    
+   text-align: center;
+}
+
+.div-subheader_timerange_box label {
+    font-size: 14px;
+    color: rgba(62, 63, 64, 1);
+    letter-spacing: 0.05em;
+    word-spacing: 0.1em;
+    line-height: 2em;
+    font-weight: 700;
+    padding: 5px 0;
+}
+
+.div-subheader_timerange_box input {
+    max-width: 150px;
+    letter-spacing: 0.1em;
+    word-spacing: 0.1em;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 10px 10px;
+    background-color: rgba(97, 95, 94, 0);
+    color: rgba(19, 37, 54, 1);
+    border: 1px solid rgba(97, 95, 94, 0);
+    border-radius: 15px;
+    overflow: auto ;
+}
+
+.div-subheader_timerange_box input:hover {
+    /*background-color: rgba(78, 110, 97, 0.8);*/
+    background-color: rgba(94,94,94,0.65);
+    transition: 0.75s;
+}
+
+
+.div-subheader_teamoption {
+    flex-flow: column wrap;
+    letter-spacing: 0.15em;
+    word-spacing: 0.1em;
+    font-weight: 700;
+    font-size: 22px;
+    color: rgba(19, 37, 54, 1);
+}
+
+.div-subheader_teamoption ul {
+    display: flex;
+    text-align: center;
+    padding: 0;
+    margin: 5px;
+    justify-content: space-around;
+}
+
+.div-subheader_teamoption li {
+    display: inline-flex;
+    min-width: 200px;
+    max-width: 200px;
+    width: 100%;
+    border-radius: 15px;
+    text-align: center;
+    justify-content: center;
+    line-height: 2.5em;
+}
+.div-subheader_teamoption li:hover {
+    background-color: rgba(97, 95, 94, 0.25);
+    transition: 0.75s;
+}
+
+
+/* 
+##########################
+#####    Infocard    #####
+##########################
+*/
+
+.div-infocard {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    padding: 5px 10px;
+    background-color: rgba(97, 95, 94, 0.1);
+    width: 100%;
+    flex-flow: column wrap;
+    border-radius: 15px;
+    transition: 1s;
+}
+
+.div-infocard:hover {
+    background-color: rgba(97, 95, 94, 0.27);
+    transition: 1s;
+}
+
+.div-infocard_title {
+    margin-top: 5px;
+    margin-bottom: 2px;
+    color: black;
+    font-weight: 400;
+    font-size: 24px;
+}
+
 /* 
 ##########################
 #####  WELCOME PAGE  #####
@@ -227,13 +323,11 @@ header span {
     display: block;
 }
 
-
 /* 
 ##########################
 ##### PROJECT VIEWER #####
 ##########################
 */
-
 
 #sec_pviewer {
     display: none; /*!!!HERE IT IS!!!!*/
@@ -241,29 +335,29 @@ header span {
 
 .div-div_img_sep{
     display: flex;
-    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 108px;
+    width: 100%;
 }
 
-#pv-infocard-general{
-    max-width: 650px;
-    margin-right: 15px;
-    margin-top: 135px;
+#pv_infocard_general{
+    max-width: 600px;
+    min-width: 600px;
+    margin-right: 10px;
+    max-height: 268px;
 }
 
-#pv-infocard-general-title h1 {
-    margin-top: 5px;
-    margin-bottom: 2px;
-    color: black;
-    font-weight: 400;
-    font-size: 24px;
-}
-
-#pv-infocard-general-title h2 {
+#pv_general_title_eng {
     margin: 0;
     margin-bottom: 15px;
     color: black;
     font-weight: 200;
     font-size: 20px;
+}
+
+.div-two_small_tables {
+    display: flex;
+    justify-content: space-around;
 }
 
 .div-image_small {
@@ -274,9 +368,8 @@ header span {
     background-color: rgba(97, 95, 94, 0.1);    
     border-radius: 15px;
     border: 1px solid rgba(97, 95, 94, 0.25);
-    margin-top: 135px;
-    margin-right: 30px;
     position: relative;
+    margin-top: 4px;
 }
 
 #img_pv_info {
@@ -326,88 +419,6 @@ header span {
     font-weight: 200;
 }
 
-/*
-*** TABLES ***
-*/
-
-td {
-    padding: 5px;
-}
-
-.table-imp {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.5em;
-}
-
-.table-nimp {
-    font-size: 14px;
-    font-weight: 200;
-    line-height: 1.5em;
-    /*ont-style: italic;*/
-    color: rgb(0, 0, 0);
-}
-
-#projectids {
-    min-width: 250px;
-}
-
-#projectids .table-right {
-    text-align: right;
-}
-
-#projectpartners {
-    min-width: 300px;
-}
-
-#projectpartners td {
-    font-size: 14px;
-}
-
-#projectpartners .table-right {
-    text-align: center;
-}
-
-#projectfinacials {
-    min-width: 450 px;
-}
-
-#projectfinancials .table-right {
-    text-align: right;
-}
-
-#pv-infotables {
-    display: flex;
-    justify-content: space-around;
-}
-
-#pv-infotables h1 {
-    display: inline-flex;
-    width: 200px;
-    margin: 0;
-}
-
-#pv-infotables h2 {
-    display: inline-flex;
-    width: 200px;
-    margin: 0;
-}
-
-#pv-infotables table {
-    margin: 10px;
-    border-collapse: collapse;
-}
-
-#pv-infotables table thead {
-    border-bottom: 3px solid rgba(74, 75, 76,1);
-    line-height: 2em;
-}
-
-#pv-infotables table thead tr th{
-    width: 100%;
-    text-align: center;
-}
-
 /* 
 ##########################
 ##### TEAM CALENDAR  #####
@@ -418,83 +429,21 @@ td {
     display: none; /*!!!HERE IT IS!!!!*/
 }
 
-#tc-calendarcard {
+#tc_calendarcard {
     max-width: 1000px;
     min-width: 1000px;
     margin-right: 15px;
-    margin-top: 216px;
-    min-height: 480px;
-    max-height: 480px;
+    margin-top: 189px;
+    min-height: 500px;
+    max-height: 500px;
+    /*overflow-y: scroll;*/
+}
+
+.div-table_tbody_scroll {
+    min-height: 400px;
+    max-height: 400px;
     overflow-y: scroll;
 }
-
-
-.tc-calendar-holder {
-    display: flex;
-    flex-flow: column wrap;
-}
-
-.calendar-table {
-    min-width: 950px;
-    margin: 0;
-}
-
-.filtercard-timerange {
-    display: flex;
-    justify-content: space-around;
-    /*margin-top: 10px;
-    margin-bottom: 5px;*/
-    align-items: center;
-    padding: 5, 10;
-    border: 1 px solid black;
-}
-
-.timerange-box {
-    display: flex;
-    flex-flow: column wrap;
-   /* justify-content: space-evenly;*/    
-   text-align: center;
-}
-
-.timerange-box label {
-    font-size: 14px;
-    color: rgba(62, 63, 64, 1);
-    letter-spacing: 0.05em;
-    word-spacing: 0.1em;
-    line-height: 2em;
-    font-weight: 700;
-    padding: 5px 0;
-}
-
-.filtercard-timerange h1 {
-    font-size: 18px;
-    color: rgba(62, 63, 64, 1);
-    letter-spacing: 0.05em;
-    word-spacing: 0.1em;
-    line-height: 2em;
-    font-weight: 700;
-    padding: 5px 0;
-}
-
-.timerange-box input {
-    max-width: 150px;
-    letter-spacing: 0.1em;
-    word-spacing: 0.1em;
-    font-weight: 700;
-    font-size: 14px;
-    padding: 10px 10px;
-    background-color: rgba(97, 95, 94, 0);
-    color: rgba(19, 37, 54, 1);
-    border: 1px solid rgba(97, 95, 94, 0);
-    border-radius: 15px;
-    overflow: auto ;
-}
-
-.timerange-box input:hover {
-    /*background-color: rgba(78, 110, 97, 0.8);*/
-    background-color: rgba(94,94,94,0.65);
-    transition: 0.75s;
-}   
 
 /* 
 ##########################
@@ -523,5 +472,16 @@ td {
 */
 
 #sec_vegboard {
+    display: none;
+}
+
+/* 
+##########################
+### Team Boards Mutual ###
+##########################
+*/
+
+.div-teamboards{
+    margin-top: 93px;
     display: none;
 }

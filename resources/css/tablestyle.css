@@ -1,0 +1,80 @@
+/*####################################
+## filename: tablestyle.css
+## projectname: TeamDashboard
+## author: Alexander Hoffmann
+## version: 0.1.1
+## date: 2021-05-13
+####################################*/
+
+/* 
+##########################
+#####     GLOBAL     #####
+##########################
+*/
+
+td {
+    padding: 5px;
+}
+
+/* 
+##########################
+##### TEAM CALENDAR  #####
+##########################
+*/
+
+.table-large {
+    min-width: 970px;
+    margin: 0;
+}
+
+/* 
+##########################
+##### PROJECT VIEWER #####
+##########################
+*/
+
+.table-small {
+    min-width: 200px;
+    max-width: 200px;
+}
+
+.td-imp {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5em;
+}
+
+.td-nimp {
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 1.5em;
+    /*ont-style: italic;*/
+    color: rgb(0, 0, 0);
+}
+
+#projectids .td-right {
+    text-align: right;
+}
+
+#projectfinacials {
+    min-width: 450 px;
+}
+
+#projectfinancials .td-right {
+    text-align: right;
+}
+
+#pv_infotables table {
+    margin: 10px;
+    border-collapse: collapse;
+}
+
+#pv_infotables table thead {
+    border-bottom: 3px solid rgba(74, 75, 76,1);
+    line-height: 2em;
+}
+
+#pv_infotables table thead tr th{
+    width: 100%;
+    text-align: center;
+}

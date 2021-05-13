@@ -1,19 +1,29 @@
+/*####################################
+## filename: script.js
+## projectname: TeamDashboard
+## author: Alexander Hoffmann
+## version: 0.1.1
+## date: 2021-05-13
+####################################*/
 
-const initializeProjectfilter = (filterID) => {
+const initializeSelectFilters = (filterID) => {
 
-  let filterElement = document.getElementById(filterID);  
-  let arrProjectList =[]
-
-  if(filterElement.id.includes("projectfilter")){
-    arrProjectList = [... new Set(arrAllProjects.filter(element => element._invbm === 'inv').map(element => element._name))];
-  } else if (filterElement.id.includes("sectorfilter")){
-    arrProjectList = [... new Set(arrAllProjects.filter(element => element._invbm === 'inv').map(element => element._team))];
-  } else if (filterElement.id.includes("countryfilter")){
-    arrProjectList = [... new Set(arrAllProjects.filter(element => element._invbm === 'inv').map(element => element._country))];
-  }
-
+  let filterElement = document.getElementById(filterID);
   const firstElementAll = document.createElement('option');
   firstElementAll.text = "All";
+  let arrProjectList =[];
+  
+  switch(filterID){
+    case "projectfilter":
+      arrProjectList = [... new Set(arrAllProjects.filter(element => element._invbm === 'inv').map(element => element._name))];
+      break;
+    case "sectorfilter":
+      arrProjectList = [... new Set(arrAllProjects.filter(element => element._invbm === 'inv').map(element => element._team))];
+      break;
+    case "countryfilter":
+      arrProjectList = [... new Set(arrAllProjects.filter(element => element._invbm === 'inv').map(element => element._country))];
+      break;
+  }
 
   filterElement.add(firstElementAll);
 
@@ -22,7 +32,6 @@ const initializeProjectfilter = (filterID) => {
     newEntry.text = element
     filterElement.add(newEntry);
   })
-
 };  
 
 const initializeTimeranges = () => {
@@ -44,13 +53,11 @@ function initializeStats() {
 }
    
   
-  initializeProjectfilter("countryfilter");
-  initializeProjectfilter("sectorfilter");
-  initializeProjectfilter("projectfilter");
-  initializeProjectfilter("countryfilter2");
-  initializeProjectfilter("sectorfilter2");
-  initializeProjectfilter("projectfilter2");
+  initializeSelectFilters("countryfilter");
+  initializeSelectFilters("sectorfilter");
+  initializeSelectFilters("projectfilter");
 
   initializeTimeranges();
+  
   initializeStats();
   

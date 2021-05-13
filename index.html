@@ -4,13 +4,64 @@
         <meta charset="UTF-8"/>
         <title>Team Dashboard</title>
         <link href="./resources/css/style.css" type="text/css" rel="stylesheet"/>
+        <link href="./resources/css/tablestyle.css" type="text/css" rel="stylesheet"/>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
         <script src="./resources/javascript/objects.js" defer></script>
+        <script src="./resources/javascript/declarations.js" defer></script>
+        <script src="./resources/javascript/generalFunctions.js" defer></script>
         <script src="./resources/javascript/eventListeners.js" defer></script>
         <script src="./resources/javascript/script.js" defer></script>
     </head>
     <body>
+        <header id="header">
+            <span>Welcome to the Team Dashboard</span>
+            <div class="div-subheader" id="subheader">
+                <div class="div-subheader_filters">
+                    <div class="div-selectfilter">
+                        <label>Country: </label>
+                    <select id="countryfilter">
+                    </select>
+                    </div>
+                    <div class="div-selectfilter">
+                        <label>Sector Team:<br/></label>
+                        <select id="sectorfilter">
+                        </select>
+                    </div>
+                    <div class="div-selectfilter">
+                        <label>Project:<br/></label>
+                        <select id="projectfilter">
+                        </select>
+                    </div>
+                </div>
+                <div class="div-subheader_timerange">
+                    <div class="div-subheader_timerange_box">
+                        <label>Start: </label>
+                        <input type="date" id="startdate">
+                    </div>
+                    <h1>To</h1>
+                    <div class="div-subheader_timerange_box"">
+                        <label>End: </label>
+                        <input type="date" id="enddate">
+                    </div>
+                </div>
+                <div class="div-subheader_teamoption" id="fruitboardmenu">
+                    <ul>
+                        <li id="li_fruitportfolio">Portfolio</li>
+                        <li id="li_fruitpipeline">Pipeline</li>
+                        <li id="li_fruitteaminfo">Team Infos</li>
+                    </ul>
+                </div>
+                <div class="div-subheader_teamoption" id="vegboardmenu">
+                    <ul>
+                        <li id="li_vegportfolio">Portfolio</li>
+                        <li id="li_vegpipeline">Pipeline</li>
+                        <li id="li_vegacquisition">Acquisition</li>
+                        <li id="li_vegteaminfo">Team Infos</li>
+                    </ul>
+                </div>
+            </div>
+        </header>
         <div class="sidenav">
             <h1>Boards</h1>
             <ul> 
@@ -22,9 +73,6 @@
             </ul>
         </div>
         <main>
-            <header id="header">
-                <span>Welcome to the Team Dashboard</span>
-            </header>
             <section id="sec_welcomepage">
                 <div class="div-infocard" id="welcomecard">
                     <h1>Welcome</h1>
@@ -34,94 +82,54 @@
                 </div>
             </section>
             <section id="sec_pviewer">
-                <div class="div-subheader" id="pviewer-filtercard">
-                    <div class="div-filtercard-filters">
-                        <div class="div-selectfilter">
-                            <label>Country: </label>
-                            <select id="countryfilter">
-                            </select>
-                        </div>
-                        <div class="div-selectfilter">
-                            <label>Sector Team:</label>
-                            <select id="sectorfilter">
-                            </select>
-                        </div>
-                        <div class="div-selectfilter">
-                            <label>Project:</label>
-                            <select id="projectfilter">
-                            </select>
-                        </div>
-                    </div>
-                </div>
                 <div class ="div-div_img_sep">
-                    <div class="div-infocard" id="pv-infocard-general">
-                        <div class="div-infocard_title" id="pv-infocard-general-title">
-                            <h1></h1>
-                            <h2></h2>
+                    <div class="div-infocard" id="pv_infocard_general">
+                        <div id="pv_infocard_general_title">
+                            <h1 class="div-infocard_title" id="pv_general_title"></h1>
+                            <h2 id="pv_general_title_eng"></h2>
                         </div>
-                        <div id="pv-infotables">
-                            <table id="projectids">
+                        <div class="div-two_small_tables" id="pv_infotables">
+                            <table class="table-small" id="projectids">
                                 <thead>
                                     <tr>
                                         <th scope="colgroup" colspan="2">Project Numbers</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="table-firstrow">
-                                        <td class="table-left table-imp">
+                                    <tr>
+                                        <td class="td-left td-imp">
                                             BMZ-No. (IV):
                                         </td>
-                                        <td class="table-right table-imp" id="pv-td-bmz-inv">
+                                        <td class="td-right td-imp" id="td_pv_bmz_inv">
                                             #
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="table-left table-nimp">
+                                        <td class="td-left td-nimp">
                                             BMZ-No. (AM):
                                         </td>
-                                        <td class="table-right table-nimp" id="pv-td-bmz-bm">
+                                        <td class="td-right td-nimp" id="td_pv_bmz_bm">
                                             #
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="table-left table-imp">
+                                        <td class="td-left td-imp">
                                             InPro-No. (IV):
                                         </td>
-                                        <td class="table-right table-imp" id="pv-td-inpro-inv">
+                                        <td class="td-right td-imp" id="td_pv_inpro_inv">
                                             #
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="table-left table-nimp">
+                                        <td class="td-left td-nimp">
                                             InPro-No. (AM):
                                         </td>
-                                        <td class="table-right table-nimp" id="pv-td-inpro-bm">
+                                        <td class="td-right td-nimp" id="td_pv_inpro_bm">
                                             #
                                         </td>
                                     </tr>
                                 </tbody>
-                            </table> <!--
-                            <table id="projectpartners">
-                                <thead>
-                                    <tr>
-                                        <th scope="colgroup" colspan="2">Project Partners</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="table-left">Partner One</td>
-                                        <td class="table-right">Role in Projetc</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="table-left">Partner Two</td>
-                                        <td class="table-right">Role in Project</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="table-left">Partner Three</td>
-                                        <td class="table-right">And their Role</td>
-                                    </tr>
-                                </tbody>
-                            </table> -->
+                            </table>
                             <table id="projectfinancials">
                                 <thead>
                                     <tr>
@@ -130,34 +138,34 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="table-left table-imp">
+                                        <td class="td-left td-imp">
                                             Investment Measure:
                                         </td>
-                                        <td class="table-right table-imp" id="pv-td-inv">
+                                        <td class="td-right td-imp" id="td_pv_inv">
                                             #
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="table-left table-nimp">
+                                        <td class="td-left td-nimp">
                                             Accompanying Measure:
                                         </td>
-                                        <td class="table-right table-nimp" id="pv-td-bm">
+                                        <td class="td-right td-nimp" id="td_pv_bm">
                                             #
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="table-left table-imp">
+                                        <td class="td-left td-imp">
                                             Grants:
                                         </td>
-                                        <td class="table-right table-imp" id="pv-td-ve">
+                                        <td class="td-right td-imp" id="td_pv_ve">
                                             #
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="table-left table-nimp">
+                                        <td class="td-left td-nimp">
                                             SBF:
                                         </td>
-                                        <td class="table-right table-nimp"  id="pv-td-sbf">
+                                        <td class="td-right td-nimp"  id="td_pv_sbf">
                                             #
                                         </td>
                                     </tr>
@@ -199,55 +207,29 @@
                 </div>
             </section>
             <section id="sec_teamcalendar">
-                <div class="div-subheader" id="tc-filtercard">
-                    <div class="div-filtercard-filters">
-                        <div class="div-selectfilter">
-                            <label>Country: </label>
-                        <select id="countryfilter2">
-                        </select>
-                        </div>
-                        <div class="div-selectfilter">
-                            <label>Sector Team:<br/></label>
-                            <select id="sectorfilter2">
-                            </select>
-                        </div>
-                        <div class="div-selectfilter">
-                            <label>Project:<br/></label>
-                            <select id="projectfilter2">
-                            </select>
-                        </div>
-                    </div>
-                    <div class="filtercard-timerange">
-                        <div class="timerange-box">
-                            <label>Start: </label>
-                            <input type="date" id="startdate">
-                        </div>
-                        <h1>To</h1>
-                        <div class="timerange-box">
-                            <label>End: </label>
-                            <input type="date" id="enddate">
-                        </div>
-                    </div>
-                </div>
-                <div class="tc-calendar-holder">
-                    <div class="div-infocard" id="tc-calendarcard">
-                        <h1 class="div-infocard_title">Past and Present Team Portfolio Events</h1>
-                        <br/>
+                <div class="div-infocard" id="tc_calendarcard">
+                    <h1 class="div-infocard_title">Past and Present Team Portfolio Events</h1>
                     <br/>
-                    <div class="div-calendar-table">
-                        <table class="calendar-table">
-                            <thead>
-                                <tr>
-                                    <th>Project</th>
-                                    <th>Event</th>
-                                    <th>Date</th>
-                                    <th>Link</th>
-                                </tr>
-                            </thead>
-                            <tbody id="calendar-table-body">
-                            </tbody>
-                        </table>
-                    </div>
+                    <br/>
+                    <div class="div-table_stick_thead" id="div_cal_table">
+                        <div class="div-table_thead" id="div_cal_table_head">
+                            <table class="table-large">
+                                <thead id="cal_table_header">
+                                    <tr>
+                                        <th>Project</th>
+                                        <th>Event</th>
+                                        <th>Date</th>
+                                        <th>Link</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="div-table_tbody_scroll" id="div_cal_table_body_scroll">
+                            <table class="table-large">
+                                <tbody id="cal_table_body">
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -264,10 +246,53 @@
                 </div>
             </section>
             <section id="sec_fruitboard">
-
+                <div class="div-teamboards" id="fruitboard_portfolio">
+                    <div class="div-infocard">
+                        <h1>Fruit-Portfolio 1</h1>
+                    </div>
+                    <div class="div-infocard">
+                        <h1>Fruit-Portfolio 2</h1>
+                    </div>
+                </div>
+                <div class="div-teamboards" id="fruitboard_pipeline">
+                    <div class="div-infocard">
+                        <h1>Fruit-Pipeline 1</h1>
+                    </div>
+                    <div class="div-infocard">
+                        <h1>Fruit-Pipeline 2</h1>
+                    </div>
+                </div>
+                <div class="div-teamboards" id="fruitboard_teaminfo">
+                    <div class="div-infocard">
+                        <h1>Fruit-Team Info 1</h1>
+                    </div>
+                    <div class="div-infocard">
+                        <h1>Fruit-Team Info 1</h1>
+                    </div>
+                </div>
             </section>
             <section id="sec_vegboard">
-
+                <div class="div-teamboards" id="vegboard_portfolio">
+                    <div class="div-infocard">
+                        <h1>Veg-Portfolio</h1>
+                    </div>
+                </div>
+                <div class="div-teamboards" id="vegboard_pipeline">
+                    <div class="div-infocard">
+                        <h1>Veg-Pipeline</h1>
+                    </div>
+                </div>
+                <div class="div-teamboards" id="vegboard_aquisition">
+                    <div class="div-infocard">
+                        <h1>Veg-Akquisition</h1>
+                    </div>
+                </div>
+                <div class="div-teamboards" id="vegboard_teaminfo">
+                    <div class="div-infocard">
+                        <h1>Veg-Team Info</h1>
+                    </div>
+                </div>
+            </section>
             </section>
         </main>
         <footer></footer>
