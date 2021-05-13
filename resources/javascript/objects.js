@@ -190,7 +190,7 @@ const arrAllProjects =
   {
     _name: 'Mango',
     _eng: 'Mango',
-    _bmz: '2020010199',
+    _bmz: '20200101',
     _inpro: '9876599',
     _invbm: 'inv',
     _country: 'India',
@@ -208,7 +208,7 @@ const arrAllProjects =
   {
     _name: 'Mango',
     _eng: 'Mango',
-    _bmz: '2020010177',
+    _bmz: '20200101',
     _inpro: '9876577',
     _invbm: 'bm',
     _country: 'India',
