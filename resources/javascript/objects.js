@@ -11,6 +11,11 @@ const arrAllProjects =
     _measure: 100000000,
     _ve: 3000000,
     _sbf: 25000,
+    _pp: 'portfolio',
+    _phase: 'Ongoing',
+    _pm: 'Anshul',
+    _tsv: 'Timon',
+    _localexpert: 'Alex',
   },
   
   {
@@ -24,6 +29,11 @@ const arrAllProjects =
     _measure: 2500000,
     _ve: 700000,
     _sbf: 0,
+    _pp: 'portfolio',
+    _phase: 'Ongoing',
+    _pm: 'Anshul',
+    _tsv: 'Timon',
+    _localexpert: 'Alex',
   },
   
   {
@@ -37,6 +47,11 @@ const arrAllProjects =
     _measure: 80000000,
     _ve: 5000000,
     _sbf: 50000,
+    _pp: 'portfolio',
+    _phase: 'ongoing',
+    _pm: 'Harsh',
+    _tsv: 'Timon',
+    _localexpert: 'Freddy',
   },
   
   {
@@ -50,6 +65,11 @@ const arrAllProjects =
     _measure: 1000000,
     _ve: 200000,
     _sbf: 5000,
+    _pp: 'portfolio',
+    _phase: 'ongoing',
+    _pm: 'Harsh',
+    _tsv: 'Timon',
+    _localexpert: 'Karo',
   },
   
   {
@@ -63,6 +83,11 @@ const arrAllProjects =
     _measure: 12500000,
     _ve: 200000,
     _sbf: 15000,
+    _pp: 'portfolio',
+    _phase: 'ongoing',
+    _pm: 'Shikha',
+    _tsv: 'Ole',
+    _localexpert: 'Freddy',
   },
   
   {
@@ -76,6 +101,11 @@ const arrAllProjects =
     _measure: 100000,
     _ve: 100000,
     _sbf: 7000,
+    _pp: 'portfolio',
+    _phase: 'ongoing',
+    _pm: 'Shikha',
+    _tsv: 'Ole',
+    _localexpert: 'Freddy',
   },
 
   {
@@ -89,6 +119,11 @@ const arrAllProjects =
     _measure: 12000000,
     _ve: 2500000,
     _sbf: 35000,
+    _pp: 'portfolio',
+    _phase: 'ongoing',
+    _pm: 'Anshul',
+    _tsv: 'Ole',
+    _localexpert: 'Freddy',
   },
   
   {
@@ -102,6 +137,11 @@ const arrAllProjects =
     _measure: 150000,
     _ve: 1000000,
     _sbf: 17000,
+    _pp: 'portfolio',
+    _phase: 'ongoing',
+    _pm: 'Anshul',
+    _tsv: 'Ole',
+    _localexpert: 'Freddy',
   },
 
   {
@@ -115,6 +155,11 @@ const arrAllProjects =
     _measure: 12000000,
     _ve: 2500000,
     _sbf: 35000,
+    _pp: 'portfolio',
+    _phase: 'ongoing',
+    _pm: 'Harsh',
+    _tsv: 'Timon',
+    _localexpert: 'Karo',
   },
   
   {
@@ -128,6 +173,11 @@ const arrAllProjects =
     _measure: 450000,
     _ve: 120000,
     _sbf: 11000,
+    _pp: 'portfolio',
+    _phase: 'ongoing',
+    _pm: 'Harsh',
+    _tsv: 'Timon',
+    _localexpert: 'Karo',
   },
 
   {
@@ -141,6 +191,11 @@ const arrAllProjects =
     _measure: 120000000,
     _ve: 3000000,
     _sbf: 25000,
+    _pp: 'portfolio',
+    _phase: 'ongoing',
+    _pm: 'Alex',
+    _tsv: 'Anshul',
+    _localexpert: 'Tapashi',
   },
   
   {
@@ -154,6 +209,11 @@ const arrAllProjects =
     _measure: 5000000,
     _ve: 1500000,
     _sbf: 10000,
+    _pp: 'portfolio',
+    _phase: 'ongoing',
+    _pm: 'Alex',
+    _tsv: 'Anshul',
+    _localexpert: 'Tapashi',
   },
 
   {
@@ -167,6 +227,11 @@ const arrAllProjects =
     _measure: 75000000,
     _ve: 3500000,
     _sbf: 12500,
+    _pp: 'portfolio',
+    _phase: 'ongoing',
+    _pm: 'Karo',
+    _tsv: 'Shikha',
+    _localexpert: 'Priya',
   },
 
   {
@@ -180,6 +245,11 @@ const arrAllProjects =
     _measure: 1500000,
     _ve: 1000000,
     _sbf: 35000,
+    _pp: 'portfolio',
+    _phase: 'ongoing',
+    _pm: 'Karo',
+    _tsv: 'Shikha',
+    _localexpert: 'Priya',
   },
 
   {
@@ -193,6 +263,11 @@ const arrAllProjects =
     _measure: 110000000,
     _ve: 4000000,
     _sbf: 22500,
+    _pp: 'portfolio',
+    _phase: 'ongoing',
+    _pm: 'Freddy',
+    _tsv: 'Priya',
+    _localexpert: 'Suraj',
   },
 
   {
@@ -206,6 +281,11 @@ const arrAllProjects =
     _measure: 2500000,
     _ve: 2000000,
     _sbf: 12000,
+    _pp: 'portfolio',
+    _phase: 'ongoing',
+    _pm: 'Freddy',
+    _tsv: 'Priya',
+    _localexpert: 'Suraj',
   },
 
   {
@@ -219,6 +299,11 @@ const arrAllProjects =
     _measure: 100000000,
     _ve: 2000000,
     _sbf: 1500,
+    _pp: 'portfolio',
+    _phase: 'ongoing',
+    _pm: 'Timon',
+    _tsv: 'Sudhir',
+    _localexpert: 'Utkarsh',
   },
 
   {
@@ -232,6 +317,11 @@ const arrAllProjects =
     _measure: 1000000,
     _ve: 250000,
     _sbf: 1000,
+    _pp: 'portfolio',
+    _phase: 'ongoing',
+    _pm: 'Timon',
+    _tsv: 'Sudhir',
+    _localexpert: 'Utkarsh',
   }
   ]
   
@@ -349,3 +439,120 @@ const arrAllProjects =
       _citationwp: 'https://www.magicgardenseeds.de/Wissenswertes/Meerrettichbaum-(Moringa-oleifera)-A.1311-',
     }
   ]
+
+  const arrCalendar = [
+    {
+      _name: 'Apfel', // country and team redundant as we can globally access arrCurrentProjectList for selection
+      _event: 'Plantation Monitoring',
+      _date: '2021-05-12',
+      _link: '',
+    },
+    {
+      _name: 'Apfel',
+      _event: 'Planting Seeds',
+      _date: '2015-03-14',
+      _link: '',
+    },
+    {
+      _name: 'Apfel',
+      _event: 'Harvest',
+      _date: '2021-08-03',
+      _link: ''
+    },
+    {
+      _name: 'Birne',
+      _event: 'Planting Seeds',
+      _date: '2019-03-02',
+      _link: ''
+    },
+    {
+      _name: 'Birne', 
+      _event: 'Plantation Monitoring',
+      _date: '2021-06-28',
+      _link: ''
+    },
+    {
+      _name: 'Pflaume',
+      _event: 'Planting Seeds',
+      _date: '2021-02-28',
+      _link: ''
+    },
+    {
+      _name: 'Karotte',
+      _event: 'Planting Seeds',
+      _date: '2021-04-15',
+      _link: '',
+    },
+    {
+      _name: 'Karotte', 
+      _event: 'Plantation Monitoring',
+      _date: '2021-07-12',
+      _link: ''
+    },
+    {
+      _name: 'Karotte', 
+      _event: 'Harvest',
+      _date: '2021-09-20',
+      _link: ''
+    },
+    {
+      _name: 'Gurke',
+      _event: 'Planting Seeds',
+      _date: '2021-02-24',
+      _link: ''
+    },
+    {
+      _name: 'Gurke',
+      _event: 'Harvest',
+      _date: '2021-08-08',
+      _link: ''
+    },
+    {
+      _name: 'Mango',
+      _event: 'Planting Seeds',
+      _date: '2014-12-14',
+      _link: ''
+    },
+    {
+      _name: 'Mango',
+      _event: 'Harvest',
+      _date: '2021-02-28',
+      _link: ''
+    },
+    {
+      _name: 'Mango',
+      _event: 'Plantation Monitoring',
+      _date: '2021-08-11',
+      _link: ','
+    },
+    {
+      _name: 'Papaya',
+      _event: 'Planting Seeds',
+      _date: '2020-07-23',
+      _link: ','
+    },
+    {
+      _name: 'Papaya',
+      _event: 'Plantation Monitoring',
+      _date: '2021-09-09',
+      _link: ','
+    },
+    {
+      _name: 'Papaya',
+      _event: 'Plantation Monizoring',
+      _date: '2022-10-09',
+      _link: ','
+    },
+    {
+      _name: 'Okra',
+      _event: 'Planting Seeds',
+      _date: '2021-01-21',
+      _link: ','
+    },
+    {
+      _name: 'Meerrettichbaum',
+      _event: 'Planting Seeds',
+      _date: '2021-06-10',
+      _link: ','
+    }
+  ];

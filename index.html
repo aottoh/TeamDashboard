@@ -14,78 +14,50 @@
         <div class="sidenav">
             <h1>Boards</h1>
             <ul> 
-                <a href="#"><li id="open-teamcalendar">Team Calendar</li></a>
-                <a id="open-teamstats" href="#"><li>Team Stats</li></a>
-                <a id="open-pviewer" href="#"><li>Project Viewer</li></a>
-            </ul><!--
-            <br/>
-            <h2>Filter Settings</h2>
-            <div class="nav-filters">
-                <label>Country: </label>
-            <select id="countryfilter">
-            </select>
-            </div>
-            <br>
-            <div class="nav-filters">
-                <label>Sector Team:<br/></label>
-                <select id="sectorfilter">
-                </select>
-                <br>
-            </div>
-            <div class="nav-filters">
-                <label>Project:<br/></label>
-                <select id="projectfilter">
-                </select>
-                <br/>
-            </div>
-            
-            <div class="nav-filters">
-                <label>Date Range:</label>
-                <input type="date"/>
-                <input type="date"/>
-            </div>
-            -->
+                <li id="li_teamcalendar">Team Calendar</li>
+                <li id="li_teamstats">Team Stats</li>
+                <li id="li_pviewer">Project Viewer</li>
+                <li id="li_fruitboard">Fruit Board</li>
+                <li id="li_vegboard">Vegetable Board</li>
+            </ul>
         </div>
         <main>
-            <section class="header-bar">
+            <header id="header">
                 <span>Welcome to the Team Dashboard</span>
-            </section>
-            <section class="welcomepage">
-                <div class="infocard" id="welcomecard">
+            </header>
+            <section id="sec_welcomepage">
+                <div class="div-infocard" id="welcomecard">
                     <h1>Welcome</h1>
                     <h2>to the</h2>
                     <h1>Team Dashboard</h1>
                     <p></p>
                 </div>
             </section>
-            <section class="pviewer">
-                <div class="filtercard" id="pviewer-filtercard">
-                    <div class="filtercard-filters">
-                        <div class="nav-filters">
+            <section id="sec_pviewer">
+                <div class="div-subheader" id="pviewer-filtercard">
+                    <div class="div-filtercard-filters">
+                        <div class="div-selectfilter">
                             <label>Country: </label>
-                        <select id="countryfilter">
-                        </select>
+                            <select id="countryfilter">
+                            </select>
                         </div>
-                        <div class="nav-filters">
-                            <label>Sector Team:<br/></label>
+                        <div class="div-selectfilter">
+                            <label>Sector Team:</label>
                             <select id="sectorfilter">
                             </select>
                         </div>
-                        <div class="nav-filters">
-                            <label>Project:<br/></label>
+                        <div class="div-selectfilter">
+                            <label>Project:</label>
                             <select id="projectfilter">
                             </select>
                         </div>
                     </div>
-                    <!--<div class="filtercard-button">
-                        <button id="submitfilters1" >Submit</button>
-                    </div> --->
                 </div>
-                <div class ="card-img-sep">
-                    <div class="infocard" id="pv-1-generalinfo">
-                        <div class="infocard-title" id="pv-title">
-                            <h1>Titel</h1>
-                            <h2>Title</h2>
+                <div class ="div-div_img_sep">
+                    <div class="div-infocard" id="pv-infocard-general">
+                        <div class="div-infocard_title" id="pv-infocard-general-title">
+                            <h1></h1>
+                            <h2></h2>
                         </div>
                         <div id="pv-infotables">
                             <table id="projectids">
@@ -193,77 +165,109 @@
                             </table>
                         </div>
                     </div>
-                    <div class="pv-image">
-                        <figure id="pv-image-fig">
-                            <img src="" type="image/jpg" id="pv_projectimage" alt="">
+                    <div class="div-image_small">
+                        <figure class="fig-image_small_overlay">
+                            <img type="image/jpg" id="img_pv_info">
                             <figcaption>
-                                <a>Link to Website</a>
+                                <a class="a-img_link" target="_blank" id="img_weblink" href="">Link to Website</a>
                                 <br/>
-                                <a>Link to Image</a>
+                                <a class="a-img_link" target="_blank" id="img_piclink" href="">Link to Image</a>
                             </figcaption>
                         </figure>
                     </div>
                 </div>
-                <div class ="infocard" id="pv-intro">
-                    <h1 class="infocard-title">Project Description</h1>
-                    <p id="pv-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class ="div-infocard" id="infocard_description">
+                    <h1 class="div-infocard_title">Project Description</h1>
+                    <p id="p_pv_description"></p>
                 </div>
                 <div class="card-card-sep">
-                    <div class="infocard">
+                    <div class="div-infocard">
                         <h1>here 1</h1>
                         <h1>here 1</h1>
                         <h1>here 1</h1>
                     </div>
-                    <div class="infocard">
+                    <div class="div-infocard">
                         <h1>here 2</h1>
                         <h1>here 2</h1>
                         <h1>here 2</h1>
                     </div>
-                    <div class="infocard">
+                    <div class="div-infocard">
                         <h1>here 2</h1>
                         <h1>here 2</h1>
                         <h1>here 2</h1>
                     </div>  
                 </div>
             </section>
-            <section class="teamcalendar">
-                <div class="infocard">
-                    <h1 class="infocard-title">Past and Present Team Portfolio Events</h1>
+            <section id="sec_teamcalendar">
+                <div class="div-subheader" id="tc-filtercard">
+                    <div class="div-filtercard-filters">
+                        <div class="div-selectfilter">
+                            <label>Country: </label>
+                        <select id="countryfilter2">
+                        </select>
+                        </div>
+                        <div class="div-selectfilter">
+                            <label>Sector Team:<br/></label>
+                            <select id="sectorfilter2">
+                            </select>
+                        </div>
+                        <div class="div-selectfilter">
+                            <label>Project:<br/></label>
+                            <select id="projectfilter2">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filtercard-timerange">
+                        <div class="timerange-box">
+                            <label>Start: </label>
+                            <input type="date" id="startdate">
+                        </div>
+                        <h1>To</h1>
+                        <div class="timerange-box">
+                            <label>End: </label>
+                            <input type="date" id="enddate">
+                        </div>
+                    </div>
+                </div>
+                <div class="tc-calendar-holder">
+                    <div class="div-infocard" id="tc-calendarcard">
+                        <h1 class="div-infocard_title">Past and Present Team Portfolio Events</h1>
+                        <br/>
                     <br/>
-                    <div class="two-column-spacearound">
-                        <div class="diplaytimerange">
-                        <h2>From</h2>
-                        <h3>Date 1</h3>
+                    <div class="div-calendar-table">
+                        <table class="calendar-table">
+                            <thead>
+                                <tr>
+                                    <th>Project</th>
+                                    <th>Event</th>
+                                    <th>Date</th>
+                                    <th>Link</th>
+                                </tr>
+                            </thead>
+                            <tbody id="calendar-table-body">
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="diplaytimerange">
-                        <h2>To</h2>
-                        <h3>Date 1</h3>
                     </div>
                 </div>
-                <br/>
-                <div class="calendar-table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Project</th>
-                                <th>Team</th>
-                                <th>Country</th>
-                                <th>Event</th>
-                                <th>Date</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>PROJECT1</td>
-                                <td>TEAM1</td>
-                                <td>COUNTRY1</td>
-                                <td>EVENT1</td>
-                                <td>DATE1</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            </section>
+            <section id="sec_teamstats">
+                <div class="div-infocard" id="ts-overview">
+                    <div class="1col2row-large" id="tso-portfoliovalue">
+                        <h1>Total Portfolio Value</h1>
+                        <h2></h2>
+                    </div>
+                    <div class="1col2row-large" id="tso-pipelinevalue">
+                        <h1>Total Pipeline Value</h1>
+                        <h2></h2>
+                    </div>
                 </div>
-                </div>
+            </section>
+            <section id="sec_fruitboard">
+
+            </section>
+            <section id="sec_vegboard">
+
             </section>
         </main>
         <footer></footer>

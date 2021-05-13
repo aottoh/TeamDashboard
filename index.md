@@ -72,3 +72,33 @@ Dark Grey: 24, 24, 23
 
 
 __________________________________
+
+
+## Naming Convention
+
+HTML / CSS
+
+Classes:
+Always start with their html tag type followed by a hyphen and the respective names. If the name consists of more than one word, the name's words can be separated by an underscore.
+Example:
+For a "<div>" element name "general Information".
+div-general_information
+
+IDs:
+IDs can be recognized, as they don't have to start with their respective element tag. their name, too, is separated using an underscore. In case an ID does start with its html tag's name, the words will still be separated by an underscore.
+Example for a "<div>" element named "general Information".
+general_information
+div_general_information
+
+
+JavaScript:
+...
+Example: ...
+....
+...
+
+
+
+
+
+## Functions in JavaScript
