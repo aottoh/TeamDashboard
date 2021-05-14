@@ -450,7 +450,7 @@ const arrAllProjects =
     {
       _name: 'Apfel', // country and team redundant as we can globally access arrCurrentProjectList for selection
       _event: 'Plantation Monitoring',
-      _date: '2021-05-12',
+      _date: '2021-05-14',
       _link: '',
     },
     {
@@ -462,7 +462,7 @@ const arrAllProjects =
     {
       _name: 'Apfel',
       _event: 'Harvest',
-      _date: '2021-08-03',
+      _date: '2021-06-03',
       _link: ''
     },
     {

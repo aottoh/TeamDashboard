@@ -133,7 +133,6 @@ inputSector.addEventListener('input', updateProjectFilter);
 
 function updateCalendar() {
   let tableBody = document.getElementById('cal_table_body');
-  let tableDataElement = document.createElement('td');
   
   while(tableBody.hasChildNodes())
   {
@@ -156,10 +155,20 @@ function updateCalendar() {
      let newDateEntry = newTableRow.insertCell(2);
      let newLinkEntry = newTableRow.insertCell(3);
 
+     newProjectEntry.classList.add("td-project");
+     newEventEntry.classList.add("td-event");
+     newDateEntry.classList.add("td-date");
+     newLinkEntry.classList.add("td-link");
+
+     newProjectEntry.classList.add("td-cal");
+     newEventEntry.classList.add("td-cal");
+     newDateEntry.classList.add("td-cal");
+     newLinkEntry.classList.add("td-cal");
+
      newProjectEntry.innerHTML= element._name;
      newEventEntry.innerHTML = element._event;
      newDateEntry.innerHTML = element._date;
-     newLinkEntry.innerHTML = 'Link';
+     newLinkEntry.innerHTML = 'DBS';
    });
 }
 

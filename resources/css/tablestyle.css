@@ -12,8 +12,11 @@
 ##########################
 */
 
-td {
-    padding: 5px;
+td, th {
+    padding-left: 15px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.35);
+    height: 30px;
 }
 
 /* 
@@ -23,9 +26,60 @@ td {
 */
 
 .table-large {
-    min-width: 970px;
     margin: 0;
 }
+
+.th-cal {
+    padding: 0;
+    text-align: center;
+    min-height: 50px;
+    max-height: 50px;
+}
+
+.th-project {
+    min-width: 335px;
+    max-width: 335px;
+}
+
+.th-event {
+    min-width: 355px;
+    max-width: 355px;
+}
+
+.th-date {
+    min-width: 175px;
+    max-width: 175px;
+}
+
+.th-link {
+    min-width: 125px;
+    max-width: 125px;
+}
+
+.td-project {
+    min-width: 320px;
+    max-width: 320px;
+}
+
+.td-event {
+    min-width: 340px;
+    max-width: 340px;
+}
+
+.td-date {
+    padding: 0;
+    text-align: center;
+    min-width: 175px;
+    max-width: 175px;
+}
+
+.td-link {
+    padding: 0;
+    text-align: center;
+    min-width: 125px;
+    max-width: 125px;
+}
+
 
 /* 
 ##########################
@@ -34,26 +88,28 @@ td {
 */
 
 .table-small {
-    min-width: 200px;
-    max-width: 200px;
+    min-width: 250px;
+    max-width: 250px;
 }
 
 .td-imp {
     font-size: 14px;
     font-weight: 700;
     line-height: 1.5em;
+    padding-right: 15px;
 }
 
 .td-nimp {
     font-size: 14px;
     font-weight: 200;
     line-height: 1.5em;
-    /*ont-style: italic;*/
     color: rgb(0, 0, 0);
+    padding-right: 15px;
 }
 
 #projectids .td-right {
     text-align: right;
+    padding-right: 15px;
 }
 
 #projectfinacials {
@@ -62,6 +118,7 @@ td {
 
 #projectfinancials .td-right {
     text-align: right;
+    padding-right: 15px;
 }
 
 #pv_infotables table {
@@ -78,3 +135,97 @@ td {
     width: 100%;
     text-align: center;
 }
+/* 
+##########################
+### Team Boards Mutual ###
+##########################
+*/
+
+.div-table_stick_rowhead {
+    display: inline-flex;
+    margin-top: 20px;
+}
+
+.div-teamboards tr {
+    background-color: white;
+}
+
+.th-rowheader {
+    height: 80px;
+    min-width: 150px;
+    padding: 0;
+    border-radius: 7px;
+    background-color: rgba(52, 60, 29, 0.6);
+}
+
+.tr-teamrow {
+    max-width: 80px;
+    height: 120px;
+    padding: 0;
+}
+
+.th-colheader {
+    height: 120px;
+    min-width: 40px;
+}
+
+.div-table_bodycols_scroll {
+    max-height: 840px;
+    min-height: 840px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transform: rotate(-90deg) translate(91px, 90px);
+    margin: 0;
+    padding: 0;
+    border-radius: 7px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.div-table_bodycols_scroll::-webkit-scrollbar {
+    display: none; /* Chrome*/
+  }
+
+.div-rotate {
+    transform: rotate(90deg);
+    transform-origin: center;
+}
+
+.td-data {
+    padding: 0;
+    min-width: 80px;
+    max-width: 80px;
+    background-color: rgba(67, 73, 27, 0.6);
+    transition: 0.25s;
+}
+
+.td-data:hover {
+    background-color: rgba(67, 73, 27, 0.8);
+    transition: 0.25s;
+}
+
+.td-header {
+    padding: 0;
+    max-width: 80px;
+    min-width: 80px;
+    background-color: rgba(52, 60, 29, 0.6);
+}
+
+
+
+
+
+
+
+
+
+
+.example::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .example {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }

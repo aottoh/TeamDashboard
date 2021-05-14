@@ -21,7 +21,7 @@ main {
     width: 100%;
     margin-left: 280px;
     margin-top: 105px;
-    position: absolute;
+    position: relative;
 }
 
 section {
@@ -436,14 +436,20 @@ header span {
     margin-top: 189px;
     min-height: 500px;
     max-height: 500px;
-    /*overflow-y: scroll;*/
 }
 
 .div-table_tbody_scroll {
-    min-height: 400px;
-    max-height: 400px;
+    min-height: 390px;
+    max-height: 390px;
     overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    border-radius: 7px;
 }
+
+.div-table_tbody_scroll::-webkit-scrollbar {
+    display: none;
+  }
 
 /* 
 ##########################
@@ -485,3 +491,11 @@ header span {
     margin-top: 93px;
     display: none;
 }
+
+#infocard_veg_portfolio {
+    max-width: 1000px;
+    min-width: 1000px;
+    max-height: 720px;
+}
+
+
