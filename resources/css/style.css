@@ -89,6 +89,7 @@ section {
 .sidenav li:hover {
     color: white;
     background-color: rgba(78, 110, 97, 0.8);
+    cursor: grab;
     transition: 0.75s;
 }
 
@@ -188,6 +189,7 @@ header span {
 .div-selectfilter select:hover{
     /*background-color: rgba(78, 110, 97, 0.8);*/
     background-color: rgba(94,94,94,0.65);
+    cursor: grab;
     transition: 0.75s;
 }
 
@@ -245,6 +247,7 @@ header span {
 .div-subheader_timerange_box input:hover {
     /*background-color: rgba(78, 110, 97, 0.8);*/
     background-color: rgba(94,94,94,0.65);
+    cursor: grab;
     transition: 0.75s;
 }
 
@@ -279,6 +282,7 @@ header span {
 .div-subheader_teamoption li:hover {
     background-color: rgba(97, 95, 94, 0.25);
     transition: 0.75s;
+    cursor: grab;
 }
 
 
@@ -298,6 +302,17 @@ header span {
     flex-flow: column wrap;
     border-radius: 15px;
     transition: 1s;
+}
+
+.div-infocard_half {
+    max-width: 485px;
+    min-width: 485px;
+}
+
+.div-two_cards{
+    display: flex;
+    justify-content: space-between;
+    /*margin-left: 35px;*/
 }
 
 .div-infocard:hover {
@@ -453,12 +468,18 @@ header span {
 
 /* 
 ##########################
-#####   TEAM STATS   #####
+####  TEAM OVERVIEW   ####
 ##########################
 */
 
 #sec_teamoverview {
     display: none;
+    margin-top: 93px;
+}
+
+.div-teamboard_table{
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* 

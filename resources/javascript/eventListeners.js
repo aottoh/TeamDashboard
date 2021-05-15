@@ -189,6 +189,7 @@ inputCountry.addEventListener('input', updateCalendar);
 inputSector.addEventListener('input', updateCalendar);
 inputStartDate.addEventListener('input', updateCalendar);
 inputEndDate.addEventListener('input', updateCalendar);
+btnTeamCal.addEventListener('click', updateCalendar);
 
 /*##########################*/
 
@@ -287,3 +288,23 @@ btnFruitBoard.addEventListener('click', showBoard);
 btnVegBoard.addEventListener('click', showBoard);
 
 /*##########################*/
+
+
+
+
+
+
+
+function updateUpcomingEvents(event){
+  let selectedBoardName = event.target.innerHTML;
+
+  if(selectedBoardName === 'Team Overview'){
+    let selectedTable = document.getElementById('tbody_team_upcomingevents');
+
+    let arrAllowedEvents = arrCalendar.filter(element => (Date.parse(element._date) >= Date.parse(inputStartDate.value)) && (Date.parse(element._date) <= Date.parse(inputEndDate.value)));
+
+    console.log(selectedTable);
+  }
+};
+
+btnTeamOverview.addEventListener('click', updateUpcomingEvents);

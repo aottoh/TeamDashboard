@@ -21,6 +21,18 @@ td, th {
 
 /* 
 ##########################
+####  TEAM OVERVIEW  #####
+##########################
+*/
+
+.td-team_link {
+    min-width: 250px;
+    max-width: 250px;
+}
+
+
+/* 
+##########################
 ##### TEAM CALENDAR  #####
 ##########################
 */
@@ -78,6 +90,15 @@ td, th {
     text-align: center;
     min-width: 125px;
     max-width: 125px;
+    font-weight: 700;
+    transition: 0.5s;
+    cursor: grab;
+}
+
+.td-link:hover {
+    color: white;
+    background-color: rgba(19, 37, 54, 1);
+    transition: 0.5s;
 }
 
 

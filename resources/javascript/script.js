@@ -44,13 +44,13 @@ const initializeTimeranges = () => {
   inputEndDate.value = targetString;
 
 };
-
+/*
 function initializeStats() {
   let h2TotalPortfolioValue = document.querySelector('#tso-portfoliovalue h2');
   let h2TotalPipelineValue = document.querySelector('#tso-portfoliovalue h2');
 
   h2TotalPortfolioValue.innerHTML = 0;
-}
+}*/
    
   
   initializeSelectFilters("countryfilter");
@@ -59,7 +59,7 @@ function initializeStats() {
 
   initializeTimeranges();
   
-  initializeStats();
+  //initializeStats();
 
   secTeamOverview.style.display = 'block';
   divTeamMenu.style.display = 'flex';
