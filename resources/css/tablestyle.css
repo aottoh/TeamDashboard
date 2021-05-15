@@ -152,11 +152,22 @@ td, th {
 
 .th-rowheader {
     height: 80px;
-    min-width: 150px;
+    min-height: 80px;
+    max-height: 80px;
+    min-width: 200px;
+    max-width: 200px;
     padding: 0;
     border-radius: 7px;
     background-color: rgba(52, 60, 29, 0.6);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
+
+.th-rowheader::-webkit-scrollbar {
+    display: none;
+  }
 
 .tr-teamrow {
     max-width: 80px;
@@ -170,11 +181,11 @@ td, th {
 }
 
 .div-table_bodycols_scroll {
-    max-height: 840px;
-    min-height: 840px;
+    max-height: 790px;
+    min-height: 790px;
     overflow-y: scroll;
     overflow-x: hidden;
-    transform: rotate(-90deg) translate(91px, 90px);
+    transform: rotate(-90deg) translate(66px, 66px);
     margin: 0;
     padding: 0;
     border-radius: 7px;
@@ -211,8 +222,24 @@ td, th {
     background-color: rgba(52, 60, 29, 0.6);
 }
 
+.th-team_2 {
+    padding-left: 15px;
+    text-align: left;
+}
 
+.th-team_2_header {
+    padding: 0;
+    text-align: center;
+}
 
+.td-team_2 {
+    padding: 0;
+    text-align: center;
+}
+
+.td-team_2_header {
+    font-weight: 700;
+}
 
 
 

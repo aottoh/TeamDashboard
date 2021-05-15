@@ -25,9 +25,16 @@ function showSection(event) {
       divProjectfilters.style.display = 'flex';
       divFruitMenu.style.display = 'none';
       divVegBoard.style.display = 'none';
+      divTeamMenu.style.display = 'none';
       break;
-    case "Team Stats":
-      secTeamStats.style.display = 'block';
+    case "Team Overview":
+      secTeamOverview.style.display = 'block';
+      divTeamMenu.style.display = 'flex';
+      divSubheader.style.display = 'block';
+      divFruitMenu.style.display = 'none';
+      divVegBoard.style.display = 'none';
+      divTimerange.style.display = 'none';
+      divProjectfilters.style.display = 'none';
       break;
     case "Project Viewer":
       secPViewer.style.display = 'block';
@@ -36,6 +43,7 @@ function showSection(event) {
       divProjectfilters.style.display = 'flex';
       divFruitMenu.style.display = 'none';
       divVegBoard.style.display = 'none';
+      divTeamMenu.style.display = 'none';
       break;
     case "Fruit Board":
       secFruit.style.display = 'block';
@@ -44,6 +52,7 @@ function showSection(event) {
       divProjectfilters.style.display = 'none';
       divFruitMenu.style.display = 'flex';
       divVegBoard.style.display = 'none';
+      divTeamMenu.style.display = 'none';
       break;
     case "Vegetable Board":
         secVeg.style.display = 'block';
@@ -52,13 +61,14 @@ function showSection(event) {
         divProjectfilters.style.display = 'none';
         divFruitMenu.style.display = 'none';
         divVegBoard.style.display = 'flex';
+        divTeamMenu.style.display = 'none';
   }
 }
 
 /*## Objects effected by showSection ##*/
 
 btnTeamCal.addEventListener('click', showSection);
-btnTeamStats.addEventListener('click', showSection);
+btnTeamOverview.addEventListener('click', showSection);
 btnPViewer.addEventListener('click', showSection);
 btnFruitBoard.addEventListener('click', showSection);
 btnVegBoard.addEventListener('click', showSection);

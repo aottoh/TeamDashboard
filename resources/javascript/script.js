@@ -60,4 +60,12 @@ function initializeStats() {
   initializeTimeranges();
   
   initializeStats();
+
+  secTeamOverview.style.display = 'block';
+  divTeamMenu.style.display = 'flex';
+  divSubheader.style.display = 'block';
+  divFruitMenu.style.display = 'none';
+  divVegBoard.style.display = 'none';
+  divTimerange.style.display = 'none';
+  divProjectfilters.style.display = 'none';
   

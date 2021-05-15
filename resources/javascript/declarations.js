@@ -7,7 +7,7 @@
 ####################################*/
 
 const btnTeamCal = document.getElementById('li_teamcalendar');
-const btnTeamStats = document.getElementById('li_teamstats');
+const btnTeamOverview = document.getElementById('li_teamoverview');
 const btnPViewer = document.getElementById('li_pviewer');
 const btnFruitBoard = document.getElementById('li_fruitboard');
 const btnVegBoard = document.getElementById('li_vegboard');
@@ -22,7 +22,7 @@ const btnVegTeamInfo = document.getElementById('li_vegteaminfo');
 
 const secPViewer = document.getElementById('sec_pviewer');
 const secTeamCal = document.getElementById('sec_teamcalendar');
-const secTeamStats = document.getElementById('sec_teamstats')
+const secTeamOverview = document.getElementById('sec_teamoverview')
 const secFruit = document.getElementById('sec_fruitboard');
 const secVeg = document.getElementById('sec_vegboard');
 
@@ -31,6 +31,7 @@ const divProjectfilters = document.querySelector('.div-subheader_filters');
 const divTimerange = document.querySelector('.div-subheader_timerange');
 const divFruitMenu = document.getElementById('fruitboardmenu');
 const divVegBoard = document.getElementById('vegboardmenu');
+const divTeamMenu = document.getElementById('overviewmenu');
 
 const secFruitPortfolio = document.getElementById('fruitboard_portfolio');
 const secFruitPipeline = document.getElementById('fruitboard_pipeline');
